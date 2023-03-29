@@ -49,7 +49,7 @@ class ArticleControllerTest {
         //when
         mvc.perform(get("/articles/1")) // 임의의 id로 테스트
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.TEXT_HTML))
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/detail")) // 뷰 네임 검사
                 .andExpect(model().attributeExists("article")) //article 이름의 키가 있는지 검증
                 .andExpect(model().attributeExists("articleComments")); //article 이름의 키가 있는지 검증
@@ -66,7 +66,7 @@ class ArticleControllerTest {
         //when
         mvc.perform(get("/articles/search")) // 임의의 id로 테스트
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.TEXT_HTML))
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/search")); // 뷰 네임 검사;
         //then
     }
@@ -80,7 +80,7 @@ class ArticleControllerTest {
         //when
         mvc.perform(get("/articles/search-hashtag")) // 임의의 id로 테스트
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.TEXT_HTML))
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
                 .andExpect(view().name("articles/search-hashtag")); // 뷰 네임 검사
         //then
     }
