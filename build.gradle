@@ -33,6 +33,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     /* 프로세스 추가 - application.yaml 파일에서 매끄러운 사용을 위해 */
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+
+    /* 스프링 시큐리티 추가 */
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+
+
     
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
