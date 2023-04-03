@@ -25,6 +25,13 @@ spring:
   data.rest:
     base-path: /api
     detection-strategy: annotated
+  thymeleaf3:
+    decoupled-logic: true
+
+
+
+
+
 
 ---
 # --- 기준으로 여러개의 document를 만들 수 있다.
