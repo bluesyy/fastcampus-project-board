@@ -29,7 +29,17 @@ dependencies {
     /* api 관련 추가 */
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.data:spring-data-rest-hal-explorer'
+    /* 타임리프 추가 */
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    /* 프로세스 추가 - application.yaml 파일에서 매끄러운 사용을 위해 */
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 
+    /* 스프링 시큐리티 추가 */
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+
+
+    
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
